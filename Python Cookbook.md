@@ -40,40 +40,66 @@ Python Cookbook
 
 ​		collections.defaultdict(list/set)
 
-1.7：	让字典保持有序
+1.7：让字典保持有序
 
 ​	创建一个字典，对字典做迭代或序列化操作时，也能控制其中元素的顺序
 
 ​		collections.OrderedDict
-1.8：	与字典有关的计算问题
+1.8：与字典有关的计算问题
 
 ​	在字典上对数据执行各种计算
 
 ​		利用zip将key和value变成一个元组，然后sorted（zip可以反转键值对，这样更加方便）
 
+​		sorted，min，max等函数的key值设定
+
 1.9:	在两个字典中寻找相同点
+
+​	keys，values，items方法返回的可以直接使用类似set的交并差集计算
 
 1.10:	从序列中移除重复项且把钱藕池元素间顺序不变
 
+​	使用生成器配合一个记录已出现值的列表来把重复值剔除
+
 1.11:	对切片命名
 
-1.12：	找出序列中出现次数最多的元素
+​	slice(start,stop,step)
+
+1.12：找出序列中出现次数最多的元素
+
+​	collections.Counter类，most_common
 
 1.13:	通过公共键对字典列表排序
 
+​	获取字典一个key对应的值，operator.itemgetter函数
+
 1.14:	对不原生支持比较操作的对象排序
+
+​	sorted函数的key使用lambda或operator.attgetter函数来获得一个对象的对应属性值
 
 1.15:	根据字段将记录分组
 
+​	itertools.groupby函数（要先排序）
+
 1.16:	筛选序列中的元素
+
+​	列表推导式和生成器，filter函数
+
+​	itertools.compress
 
 1.17:	从字典中提取子集
 
+​	字典推导式
+
 1.18:	将名称映射到序列的元素中
+
+​	collections.namedtuple
 
 1.19：	同时对数据做转换和换算
 
+​	在函数参数中使用生成器
+
 1.20：	将多个映射合并为单个映射
 
-
+​	collections中的ChainMap模块
 
